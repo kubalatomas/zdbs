@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9afa1fcd-925e-4e17-8833-e59737310dbb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ZDBS/com/company/Generator.class" afterPath="$PROJECT_DIR$/out/production/ZDBS/com/company/Generator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ZDBS/com/company/Main.class" afterPath="$PROJECT_DIR$/out/production/ZDBS/com/company/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mp_muzi.txt" afterPath="$PROJECT_DIR$/mp_muzi.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mp_zeny.txt" afterPath="$PROJECT_DIR$/mp_zeny.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Generator.java" afterPath="$PROJECT_DIR$/src/com/company/Generator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ulice.txt" afterPath="$PROJECT_DIR$/ulice.txt" />
     </list>
     <ignored path="ZDBS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,8 +57,8 @@
       <file leaf-file-name="Generator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Generator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="128" column="37" selection-start-line="128" selection-start-column="37" selection-end-line="128" selection-end-column="37" />
+            <state relative-caret-position="337">
+              <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -653,7 +646,7 @@
       <workItem from="1463425450524" duration="8702000" />
       <workItem from="1463470247967" duration="461000" />
       <workItem from="1463489432606" duration="17178000" />
-      <workItem from="1463511707550" duration="158000" />
+      <workItem from="1463511707550" duration="265000" />
     </task>
     <task id="LOCAL-00001" summary="Add Typ pravidelnej platby">
       <created>1463470580824</created>
@@ -669,11 +662,18 @@
       <option name="project" value="LOCAL" />
       <updated>1463501471037</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Commit inserts">
+      <created>1463511945183</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1463511945183</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35989000" />
+    <option name="totallyTimeSpent" value="36096000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1186" extended-state="6" />
@@ -721,7 +721,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add Typ pravidelnej platby" />
     <MESSAGE value="New commit&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="New commit&#10;" />
+    <MESSAGE value="Commit inserts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit inserts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -973,8 +974,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Generator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="128" column="37" selection-start-line="128" selection-start-column="37" selection-end-line="128" selection-end-column="37" />
+        <state relative-caret-position="337">
+          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
