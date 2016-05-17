@@ -103,6 +103,12 @@ public class Main {
         System.out.println(g.generujDlh());
         System.out.println(g.generujDlh());
 
+        System.out.println();
+        System.out.println(g.generujTypPP());
+        System.out.println(g.generujTypPP());
+        System.out.println(g.generujTypPP());
+        System.out.println(g.generujTypPP());
+        System.out.println(g.generujTypPP());
 
     }
 }

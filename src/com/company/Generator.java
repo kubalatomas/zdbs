@@ -41,11 +41,12 @@ public class Generator {
 
     Random r;
 
-    public int id_domacnosti = 0;
-    public int id_pav = 0;
-    public int id_dlhu = 0;
-    public int id_spav = 0;
-    public int id_typdlhu = 0;
+    int id_domacnosti = 0;
+    int id_pav = 0;
+    int id_dlhu = 0;
+    int id_spav = 0;
+    int id_typdlhu = 0;
+    int id_pp  = 0;
 
     public Generator()
     {
@@ -341,5 +342,10 @@ public class Generator {
     String generujDlh() {
         id_typdlhu++;
         return id_typdlhu + ";" + id_domacnosti + ";" + dlhy.get(r.nextInt(dlhy.size())) + ";" + r.nextInt(5000-100+1)+100 + ";" + datumy.get(r.nextInt(datumy.size())) + ";" + obdobie.get(r.nextInt(obdobie.size()));
+    }
+
+    String generujTypPP() {
+        id_pp++;
+        return id_pp + ";1;" + datumy.get(r.nextInt(datumy.size())) + ";" + obdobie.get(r.nextInt(obdobie.size()));
     }
 }
