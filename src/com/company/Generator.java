@@ -33,7 +33,7 @@ public class Generator {
 
     ArrayList<String> datumy = new ArrayList<>();
 
-    ArrayList<Integer> actualOsoby = new ArrayList<>();
+    ArrayList<String> actualOsoby = new ArrayList<>();
     ArrayList<Pav> actualPav = new ArrayList<>();
 
     ArrayList<String> dlhy = new ArrayList<>();;
@@ -219,12 +219,46 @@ public class Generator {
         }
     }
 
-    String generujZenu() {
-        return "RODCISLO;" + id_domacnosti + ";MATKA_RODCISLO;OTEC_RODCISLO;" + mena_zeny.get(r.nextInt(mena_zeny.size())) + ";" + priezviska_zeny.get(r.nextInt(priezviska_zeny.size()));
+    String generujZenu(String rc) {
+        String mrc = "NULL";
+        String orc = "NULL";
+        if (actualOsoby.isEmpty() || actualOsoby.size() == 1) {
+            actualOsoby.add(rc);
+            return rc + ";" + id_domacnosti + ";" + mena_zeny.get(r.nextInt(mena_zeny.size())) + ";" + priezviska_zeny.get(r.nextInt(priezviska_zeny.size())) + ";" + generujDatum(rc) + ";" + "1";
+        } else if (actualOsoby.size() == 2 || actualOsoby.size() == 3) {
+            mrc = actualOsoby.get(0);
+            orc = actualOsoby.get(1);
+            actualOsoby.add(rc);
+            return rc + ";" + id_domacnosti + ";" + mena_zeny.get(r.nextInt(mena_zeny.size())) + ";" + priezviska_zeny.get(r.nextInt(priezviska_zeny.size())) + ";" + generujDatum(rc) + ";" + "2";
+        } else if (actualOsoby.size() == 4) {
+            mrc = actualOsoby.get(2);
+            orc = actualOsoby.get(3);
+            actualOsoby.add(rc);
+            return rc + ";" + id_domacnosti + ";" + mena_zeny.get(r.nextInt(mena_zeny.size())) + ";" + priezviska_zeny.get(r.nextInt(priezviska_zeny.size())) + ";" + generujDatum(rc) + ";" + "3";
+        }
+        return "Ola";
     }
 
-    String generujMuza() {
-        return  "RODCISLO;" + id_domacnosti + ";MATKA_RODCISLO;OTEC_RODCISLO;" + mena_muzi.get(r.nextInt(mena_muzi.size())) + ";"+ priezviska_muzi.get(r.nextInt(priezviska_muzi.size()));
+    String generujMuza(String rc) {
+        String mrc = "NULL";
+        String orc = "NULL";
+        if (actualOsoby.isEmpty() || actualOsoby.size() == 1) {
+            actualOsoby.add(rc);
+            return rc + ";" + id_domacnosti + ";" + mena_muzi.get(r.nextInt(mena_muzi.size())) + ";"+ priezviska_muzi.get(r.nextInt(priezviska_muzi.size())) + ";" + generujDatum(rc) + ";" + "1";
+        } else if (actualOsoby.size() == 2 || actualOsoby.size() == 3) {
+            mrc = actualOsoby.get(0);
+            orc = actualOsoby.get(1);
+            actualOsoby.add(rc);
+            return rc + ";" + id_domacnosti + ";" + mena_muzi.get(r.nextInt(mena_muzi.size())) + ";"+ priezviska_muzi.get(r.nextInt(priezviska_muzi.size())) + ";" + generujDatum(rc) + ";" + "2";
+        } else if (actualOsoby.size() == 4) {
+            mrc = actualOsoby.get(2);
+            orc = actualOsoby.get(3);
+            actualOsoby.add(rc);
+            return rc + ";" + id_domacnosti + ";" + mena_muzi.get(r.nextInt(mena_muzi.size())) + ";"+ priezviska_muzi.get(r.nextInt(priezviska_muzi.size())) + ";" + generujDatum(rc) + ";" + "3";
+        }
+        return "Ola";
+
+
     }
 
 
@@ -301,8 +335,9 @@ public class Generator {
 
             }
             if (find) {
-
-                result = id_spav + ";" + "RODCISLO;" + actualPav.get(index).getId_pav() + ";" + r.nextInt(200) + ";";
+                int indexxx = r.nextInt(actualOsoby.size());
+                String rc = actualOsoby.get(indexxx);
+                result = id_spav + ";" + rc + ";" + actualPav.get(index).getId_pav() + ";" + r.nextInt(200) + ";";
                 if (r.nextInt(15) % 3 == 0) {
                     result += "T";
                 } else {
@@ -316,6 +351,28 @@ public class Generator {
         return result;
 
 
+    }
+
+    String generujDatum(String rc) {
+        String year = "";
+        String month = "";
+        String day = "";
+        if (rc.charAt(0) == '0') {
+            year = "200" + rc.charAt(1);
+        } else {
+            year = "19" + rc.charAt(0) + rc.charAt(1);
+        }
+
+        if (rc.charAt(2) == '6') {
+            month = "1" + rc.charAt(3);
+        } else if (rc.charAt(2) == '5') {
+            month = "0" + rc.charAt(3);
+        } else {
+            month = Character.toString(rc.charAt(2)) + Character.toString(rc.charAt(3));
+        }
+
+        day = Character.toString(rc.charAt(4)) + Character.toString(rc.charAt(5)) ;
+        return day + "-" + month + "-" + year;
     }
 
     public void nacitajObdobie(){
