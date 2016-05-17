@@ -1,0 +1,15 @@
+execute vloz_adresu(1,'Lipova','19','Svaty Jur','Bratislavsky kraj');
+execute vloz_adresu(2,'Dubova','146','Senkvice','Bratislavsky kraj');
+execute vloz_adresu(3,'Daxnerova','256','Svaty Jur','Bratislavsky kraj');
+execute vloz_adresu(4,'Bernolakova','25','Bratislava IV','Bratislavsky kraj');
+execute vloz_adresu(5,'Rybniky','183','Bratislava III','Bratislavsky kraj');
+execute vloz_adresu(6,'Klemensova','199','Pezinok','Bratislavsky kraj');
+execute vloz_adresu(7,'Tulipanova','43','Turany','Zilinsky kraj');
+execute vloz_adresu(8,'Bytcicka','59','Rajec','Zilinsky kraj');
+execute vloz_adresu(9,'Sturova','45','Turany','Zilinsky kraj');
+execute vloz_adresu(10,'Daxnerova','2','Terchova','Zilinsky kraj');
+execute vloz_adresu(11,'Lipova','43','Turcianske Teplice','Zilinsky kraj');
+execute vloz_adresu(12,'Hlboka cesta','187','Bytca','Zilinsky kraj');
+execute vloz_adresu(13,'Hlinska','23','Martin','Zilinsky kraj');
+execute vloz_adresu(14,'Stavbarska','134','Sucany','Zilinsky kraj');
+execute vloz_adresu(15,'Bernolakova','275','Terchova','Zilinsky kraj');

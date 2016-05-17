@@ -156,14 +156,14 @@ public class Generator {
 
     String generujUcet() {
         id_uctu++;
-        return id_uctu + ";" + id_domacnosti;
+        return "execute vloz_ucet(" + id_uctu + "," + id_domacnosti + ");";
     }
 
     String generujUlicu()
     {
         return (r.nextInt(100) > 70)
-                ? (ulice.get(r.nextInt(ulice.size())) + ";'" + Integer.toString(r.nextInt(300))) + "'"
-                : (ulice.get(r.nextInt(ulice.size())) + ";'" + Integer.toString(r.nextInt(300))) + "'";
+                ? (ulice.get(r.nextInt(ulice.size())) + ",'" + Integer.toString(r.nextInt(300))) + "'"
+                : (ulice.get(r.nextInt(ulice.size())) + ",'" + Integer.toString(r.nextInt(300))) + "'";
     }
 
     String generujKraj()
@@ -178,7 +178,7 @@ public class Generator {
 
     String generujDomacnost() {
         id_domacnosti++;
-        return id_domacnosti + ";" + id_adresy;
+        return "execute vloz_domacnost(" + id_domacnosti + "," + id_adresy + ");    ";
     }
 
     String generujAdresu()
@@ -216,7 +216,7 @@ public class Generator {
                 mesto = mestaza_mt.get(r.nextInt(5));
             }
         }
-        return id_adresy + ";" + generujUlicu() + ";" + mesto + ";" + okres + ";" + kraj;
+        return "execute vloz_adresu(" + id_adresy + "," + generujUlicu() + "," + mesto + "," + kraj + ");";
     }
 
     void nacitajMenaPriezviska() {
@@ -244,17 +244,17 @@ public class Generator {
         String orc = "NULL";
         if (actualOsoby.isEmpty() || actualOsoby.size() == 1) {
             actualOsoby.add(rc);
-            return rc + ";" + id_domacnosti + ";" + mena_zeny.get(r.nextInt(mena_zeny.size())) + ";" + priezviska_zeny.get(r.nextInt(priezviska_zeny.size())) + ";" + generujDatum(rc) + ";" + "1";
+            return "execute vloz_osobu(" + rc + "," + id_domacnosti + "," + mena_zeny.get(r.nextInt((mena_zeny.size() - 1)) + 1) + "," + priezviska_zeny.get(r.nextInt(priezviska_zeny.size())) + "," + generujDatum(rc) + "," + "1);";
         } else if (actualOsoby.size() == 2 || actualOsoby.size() == 3) {
             mrc = actualOsoby.get(0);
             orc = actualOsoby.get(1);
             actualOsoby.add(rc);
-            return rc + ";" + id_domacnosti + ";" + mena_zeny.get(r.nextInt(mena_zeny.size())) + ";" + priezviska_zeny.get(r.nextInt(priezviska_zeny.size())) + ";" + generujDatum(rc) + ";" + "2";
+            return "execute vloz_osobu(" + rc + "," + id_domacnosti + "," + mena_zeny.get(r.nextInt((mena_zeny.size() - 1)) + 1) + "," + priezviska_zeny.get(r.nextInt(priezviska_zeny.size())) + "," + generujDatum(rc) + "," + "2);";
         } else if (actualOsoby.size() == 4) {
             mrc = actualOsoby.get(2);
             orc = actualOsoby.get(3);
             actualOsoby.add(rc);
-            return rc + ";" + id_domacnosti + ";" + mena_zeny.get(r.nextInt(mena_zeny.size())) + ";" + priezviska_zeny.get(r.nextInt(priezviska_zeny.size())) + ";" + generujDatum(rc) + ";" + "3";
+            return "execute vloz_osobu(" + rc + "," + id_domacnosti + "," + mena_zeny.get(r.nextInt((mena_zeny.size() - 1)) + 1) + "," + priezviska_zeny.get(r.nextInt(priezviska_zeny.size())) + "," + generujDatum(rc) + "," + "3);";
         }
         return "Ola";
     }
@@ -264,17 +264,17 @@ public class Generator {
         String orc = "NULL";
         if (actualOsoby.isEmpty() || actualOsoby.size() == 1) {
             actualOsoby.add(rc);
-            return rc + ";" + id_domacnosti + ";" + mena_muzi.get(r.nextInt(mena_muzi.size())) + ";"+ priezviska_muzi.get(r.nextInt(priezviska_muzi.size())) + ";" + generujDatum(rc) + ";" + "1";
+            return "execute vloz_osobu(" + rc + "," + id_domacnosti + "," + mena_muzi.get(r.nextInt((mena_muzi.size() - 1)) + 1) + ","+ priezviska_muzi.get(r.nextInt(priezviska_muzi.size())) + "," + generujDatum(rc) + "," + "1);";
         } else if (actualOsoby.size() == 2 || actualOsoby.size() == 3) {
             mrc = actualOsoby.get(0);
             orc = actualOsoby.get(1);
             actualOsoby.add(rc);
-            return rc + ";" + id_domacnosti + ";" + mena_muzi.get(r.nextInt(mena_muzi.size())) + ";"+ priezviska_muzi.get(r.nextInt(priezviska_muzi.size())) + ";" + generujDatum(rc) + ";" + "2";
+            return "execute vloz_osobu(" + rc + "," + id_domacnosti + "," + mena_muzi.get(r.nextInt((mena_muzi.size() - 1)) + 1) + ","+ priezviska_muzi.get(r.nextInt(priezviska_muzi.size())) + "," + generujDatum(rc) + "," + "2);";
         } else if (actualOsoby.size() == 4) {
             mrc = actualOsoby.get(2);
             orc = actualOsoby.get(3);
             actualOsoby.add(rc);
-            return rc + ";" + id_domacnosti + ";" + mena_muzi.get(r.nextInt(mena_muzi.size())) + ";"+ priezviska_muzi.get(r.nextInt(priezviska_muzi.size())) + ";" + generujDatum(rc) + ";" + "3";
+            return "execute vloz_osobu(" + rc + "," + id_domacnosti + "," + mena_muzi.get(r.nextInt((mena_muzi.size() - 1)) + 1) + ","+ priezviska_muzi.get(r.nextInt(priezviska_muzi.size())) + "," + generujDatum(rc) + "," + "3);";
         }
         return "Ola";
 
@@ -412,8 +412,8 @@ public class Generator {
         int suma = r.nextInt(1000);
         String typ = typ_prijmu_osoba.get(r.nextInt(typ_prijmu_osoba.size()));
         String datum = datumy.get(r.nextInt(datumy.size()));
-        String sql1 = id_prijem_domacnost + ";" + id_uctu + ";" + id_domacnosti + ";" + suma + ";" + typ + ";" + datum;
-        String sql2 = id_prijem_osoba + ";" + actualOsoby.get(r.nextInt(actualOsoby.size())) + ";" + id_prijem_domacnost + ";" + datum + ";" + suma + ";" + typ;
+        String sql1 = "execute vloz_prijem_domacnosti(" + id_prijem_domacnost + "," + id_uctu + "," + id_domacnosti + "," + suma + "," + typ + "," + datum + ",'');";
+        String sql2 = "execute vloz_prijem_osoby(" + id_prijem_osoba + "," + actualOsoby.get(r.nextInt(actualOsoby.size())) + "," + id_prijem_domacnost + "," + datum + "," + suma + "," + typ + ",'');" ;
         result[0] = sql1;
         result[1] = sql2;
         return result;
@@ -424,7 +424,7 @@ public class Generator {
         int suma = r.nextInt(1000);
         String typ = typ_prijmu_domacnost.get(r.nextInt(typ_prijmu_domacnost.size()));
         String datum = datumy.get(r.nextInt(datumy.size()));
-        return id_prijem_domacnost + ";" + id_uctu + ";" + id_domacnosti + ";" + suma + ";" + typ + ";" + datum;
+        return "execute vloz_prijem_domacnosti(" + id_prijem_domacnost + "," + id_uctu + "," + id_domacnosti + "," + suma + "," + typ + "," + datum + ",'');";
     }
 
     String generujVydajDomacnost() {
@@ -432,7 +432,7 @@ public class Generator {
         int suma = r.nextInt(1000);
         String typ = typ_vydaje_domacnosti.get(r.nextInt(typ_vydaje_domacnosti.size()));
         String datum = datumy.get(r.nextInt(datumy.size()));
-        return id_vydaj_domacnosti + ";" + id_uctu + ";" + id_domacnosti + ";" + typ + ";" + suma + ";" + datum;
+        return "execute vloz_vydaj_domacnosti(" + id_vydaj_domacnosti + "," + id_uctu + "," + id_domacnosti + "," + suma + "," + typ + "," + datum + ",'');";
     }
 
     String[] generujVydajOsoba() {
@@ -442,34 +442,9 @@ public class Generator {
         int suma = r.nextInt(1000);
         String typ = typ_vydaje_osoby.get(r.nextInt(typ_vydaje_osoby.size()));
         String datum = datumy.get(r.nextInt(datumy.size()));
-        String datum2 = "";
-        String sql1 = id_vydaj_domacnosti + ";" + id_uctu + ";" + id_domacnosti + ";" + typ + ";" + suma + ";" + datum;
-        String sql2 = id_vydaj_osoby + ";" + actualOsoby.get(r.nextInt(actualOsoby.size())) + ";" + id_vydaj_domacnosti + ";" + datum + ";" + suma + ";" + typ;
-        String day = Character.toString(datum.charAt(1)) + Character.toString(datum.charAt(2));
-        String month = Character.toString(datum.charAt(4)) + Character.toString(datum.charAt(5));
-        if (r.nextInt(20) % 3 == 0) {
-            int newday = Integer.parseInt(day) + 14;
-            if (newday > 30) {
-                newday -= 30;
-                if (newday < 10) {
-                    datum2 = "'0" + newday + "-";
-                } else {
-                    datum2 = "'" + newday + "-";
-                }
-                int newmonth = Integer.parseInt(month) + 1;
-                if (Integer.parseInt(month) < 10) {
+        String sql1 = "execute vloz_vydaj_domacnosti(" + id_vydaj_domacnosti + "," + id_uctu + "," + id_domacnosti + "," + suma + "," + typ + "," + datum + ",'');";
+        String sql2 = "execute vloz_vydaje_osoby("+ id_vydaj_osoby + "," + actualOsoby.get(r.nextInt(actualOsoby.size())) + "," + id_vydaj_domacnosti + "," + datum + "," + suma + "," + typ + ",''," + datum + ");";
 
-                    datum2 += "0" + newmonth +"-";
-                } else {
-                    datum2 += newmonth + "-";
-                }
-                datum2 += Character.toString(datum.charAt(6)) + Character.toString(datum.charAt(7)) + Character.toString(datum.charAt(8)) + Character.toString(datum.charAt(9)) + "'";
-            } else {
-                datum2 = "'" + newday + "-" + month + "-" + Character.toString(datum.charAt(6)) + Character.toString(datum.charAt(7)) + Character.toString(datum.charAt(8)) + Character.toString(datum.charAt(9)) + "'";
-            }
-        }
-
-        sql1 += ";" + datum2;
         result[0] = sql1;
         result[1] = sql2;
         return result;
@@ -510,7 +485,7 @@ public class Generator {
 
     String generujDlh() {
         id_typdlhu++;
-        return id_typdlhu + ";" + id_domacnosti + ";" + dlhy.get(r.nextInt(dlhy.size())) + ";" + r.nextInt(5000-100+1)+100 + ";" + datumy.get(r.nextInt(datumy.size())) + ";" + obdobie.get(r.nextInt(obdobie.size()));
+        return id_typdlhu + "," + id_domacnosti + "," + dlhy.get(r.nextInt(dlhy.size())) + ";" + r.nextInt(5000-100+1)+100 + ";" + datumy.get(r.nextInt(datumy.size())) + ";" + obdobie.get(r.nextInt(obdobie.size()));
     }
 
     String generujTypPP() {

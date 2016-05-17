@@ -1,0 +1,15 @@
+execute vloz_ucet(1,1);
+execute vloz_ucet(2,2);
+execute vloz_ucet(3,3);
+execute vloz_ucet(4,4);
+execute vloz_ucet(5,5);
+execute vloz_ucet(6,6);
+execute vloz_ucet(7,7);
+execute vloz_ucet(8,8);
+execute vloz_ucet(9,9);
+execute vloz_ucet(10,10);
+execute vloz_ucet(11,11);
+execute vloz_ucet(12,12);
+execute vloz_ucet(13,13);
+execute vloz_ucet(14,14);
+execute vloz_ucet(15,15);

@@ -6,16 +6,18 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
+
+
         Generator g = new Generator();
         Random r = new Random();
-        PrintWriter adresa = new PrintWriter("inserty\\Adresa.txt", "UTF-8");
-        PrintWriter domacnost = new PrintWriter("inserty\\Domacnost.txt", "UTF-8");
-        PrintWriter osoba = new PrintWriter("inserty\\Osoba.txt", "UTF-8");
-        PrintWriter prijem_domacnosti = new PrintWriter("inserty\\Prijem_domacnosti.txt", "UTF-8");
-        PrintWriter prijem_osoby = new PrintWriter("inserty\\Prijem_osoby.txt", "UTF-8");
-        PrintWriter ucet = new PrintWriter("inserty\\Ucet.txt", "UTF-8");
-        PrintWriter vydaje_domacnosti = new PrintWriter("inserty\\Vydaje_domacnosti.txt", "UTF-8");
-        PrintWriter vydaje_osoby = new PrintWriter("inserty\\Vydaje_osoby.txt", "UTF-8");
+        PrintWriter adresa = new PrintWriter("inserty\\Adresa.sql", "UTF-8");
+        PrintWriter domacnost = new PrintWriter("inserty\\Domacnost.sql", "UTF-8");
+        PrintWriter osoba = new PrintWriter("inserty\\Osoba.sql", "UTF-8");
+        PrintWriter prijem_domacnosti = new PrintWriter("inserty\\Prijem_domacnosti.sql", "UTF-8");
+        PrintWriter prijem_osoby = new PrintWriter("inserty\\Prijem_osoby.sql", "UTF-8");
+        PrintWriter ucet = new PrintWriter("inserty\\Ucet.sql", "UTF-8");
+        PrintWriter vydaje_domacnosti = new PrintWriter("inserty\\Vydaje_domacnosti.sql", "UTF-8");
+        PrintWriter vydaje_osoby = new PrintWriter("inserty\\Vydaje_osoby.sql", "UTF-8");
 
         g.nacitajMenaPriezviska();
         g.nacitajPav();
@@ -58,6 +60,7 @@ public class Main {
             prijem_domacnosti.println(result[0]);
             prijem_osoby.println(result[1]);
         }
+
         System.out.println("Generovanie dat - prijem domacnosti");
         interval = r.nextInt((6 - 3) + 1) + 3;
         for (int i = 0; i < interval; i++) {
@@ -185,7 +188,7 @@ public class Main {
         osoba.println(g.generujZenu("'495503/618'"));
         osoba.println(g.generujMuza("'510218/721'"));
         osoba.println(g.generujZenu("'645617/0831'"));
-        osoba.println(g.generujMuza("'780711/5789'"));
+        osoba.println(g.generujMuza("'780711/5790'"));
         osoba.println(g.generujMuza("'900515/3883'"));
 
 
@@ -345,7 +348,7 @@ public class Main {
         ucet.println(g.generujUcet());
 
         System.out.println("Generovanie osob");
-        osoba.println(g.generujZenu("'655903/0368'"));
+        osoba.println(g.generujZenu("'655903/0378'"));
         osoba.println(g.generujMuza("'781119/5953'"));
 
 
@@ -385,7 +388,7 @@ public class Main {
         ucet.println(g.generujUcet());
 
         System.out.println("Generovanie osob");
-        osoba.println(g.generujZenu("'476128/485'"));
+        osoba.println(g.generujZenu("'476128/4851'"));
         osoba.println(g.generujMuza("'490703/832'"));
         osoba.println(g.generujZenu("'655903/0368'"));
         osoba.println(g.generujZenu("'930820/3652'"));
@@ -465,11 +468,11 @@ public class Main {
         ucet.println(g.generujUcet());
 
         System.out.println("Generovanie osob");
-        osoba.println(g.generujZenu("'435208/911'"));
-        osoba.println(g.generujMuza("'500114/228'"));
+        osoba.println(g.generujZenu("'435208/9111'"));
+        osoba.println(g.generujMuza("'500114/2281'"));
         osoba.println(g.generujZenu("'775711/1560'"));
         osoba.println(g.generujMuza("'710113/8099'"));
-        osoba.println(g.generujZenu("'055312/7058'"));
+        osoba.println(g.generujZenu("'055312/7158'"));
 
         System.out.println("Generovanie dat - vydaje osoby");
 

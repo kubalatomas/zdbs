@@ -1,15 +1,15 @@
-1;'Platanova';'61';'Budmerice';'Pezinok';'Bratislavsky kraj'
-2;'Boricka';'226';'Pezinok';'Pezinok';'Bratislavsky kraj'
-3;'Stefanikova';'50';'Senkvice';'Pezinok';'Bratislavsky kraj'
-4;'Valna';'214';'Bratislava V';'Bratislava';'Bratislavsky kraj'
-5;'Bottova';'11';'Senkvice';'Pezinok';'Bratislavsky kraj'
-6;'Narodna';'138';'Martin';'Martin';'Zilinsky kraj'
-7;'Centralna';'95';'Vrutky';'Martin';'Zilinsky kraj'
-8;'Nesporova';'76';'Bratislava I';'Bratislava';'Bratislavsky kraj'
-9;'Dlha';'231';'Bratislava III';'Bratislava';'Bratislavsky kraj'
-10;'Orolska';'121';'Bratislava IV';'Bratislava';'Bratislavsky kraj'
-11;'Obvodova';'220';'Modra';'Pezinok';'Bratislavsky kraj'
-12;'Stavbarska';'23';'Budmerice';'Pezinok';'Bratislavsky kraj'
-13;'Orolska';'98';'Bela';'Zilina';'Zilinsky kraj'
-14;'Smrekova';'282';'Bratislava III';'Bratislava';'Bratislavsky kraj'
-15;'Bajzova';'177';'Bela';'Zilina';'Zilinsky kraj'
+execute vloz_adresu(1,'Stefanikova','90','Rajec','Zilinsky kraj');
+execute vloz_adresu(2,'Bajzova','99','Bela','Zilinsky kraj');
+execute vloz_adresu(3,'Suvorova','66','Terchova','Zilinsky kraj');
+execute vloz_adresu(4,'Tulipanova','204','Rajec','Zilinsky kraj');
+execute vloz_adresu(5,'Stavbarska','217','Pezinok','Bratislavsky kraj');
+execute vloz_adresu(6,'Hlboka cesta','89','Bratislava III','Bratislavsky kraj');
+execute vloz_adresu(7,'Stefanikova','264','Turany','Zilinsky kraj');
+execute vloz_adresu(8,'Limbova','185','Bratislava III','Bratislavsky kraj');
+execute vloz_adresu(9,'Platanova','55','Bratislava IV','Bratislavsky kraj');
+execute vloz_adresu(10,'Platanova','6','Terchova','Zilinsky kraj');
+execute vloz_adresu(11,'Ovsena','158','Vrutky','Zilinsky kraj');
+execute vloz_adresu(12,'Stavbarska','105','Pezinok','Bratislavsky kraj');
+execute vloz_adresu(13,'Lipova','282','Turany','Zilinsky kraj');
+execute vloz_adresu(14,'Narodna','230','Bytca','Zilinsky kraj');
+execute vloz_adresu(15,'Limbova','283','Bratislava I','Bratislavsky kraj');
