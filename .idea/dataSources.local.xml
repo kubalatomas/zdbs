@@ -3,8 +3,9 @@
   <component name="dataSourceStorageLocal">
     <data-source name="Oracle - @asterix.fri.uniza.sk" uuid="736aa1b6-0034-4524-b77a-db3ffbd66555">
       <secret-storage>master_key</secret-storage>
-      <first-sync>true</first-sync>
       <user-name>kubala25</user-name>
+      <schema-pattern>*.KUBALA25 *.PUBLIC *.SYS *.SYSTEM</schema-pattern>
+      <default-schemas>*.KUBALA25 *.PUBLIC</default-schemas>
     </data-source>
   </component>
 </project>
