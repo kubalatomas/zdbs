@@ -1,0 +1,15 @@
+execute vloz_adresu(1,'Stefanikova','90','Rajec','Zilinsky kraj');
+execute vloz_adresu(2,'Bajzova','99','Bela','Zilinsky kraj');
+execute vloz_adresu(3,'Suvorova','66','Terchova','Zilinsky kraj');
+execute vloz_adresu(4,'Tulipanova','204','Rajec','Zilinsky kraj');
+execute vloz_adresu(5,'Stavbarska','217','Pezinok','Bratislavsky kraj');
+execute vloz_adresu(6,'Hlboka cesta','89','Bratislava III','Bratislavsky kraj');
+execute vloz_adresu(7,'Stefanikova','264','Turany','Zilinsky kraj');
+execute vloz_adresu(8,'Limbova','185','Bratislava III','Bratislavsky kraj');
+execute vloz_adresu(9,'Platanova','55','Bratislava IV','Bratislavsky kraj');
+execute vloz_adresu(10,'Platanova','6','Terchova','Zilinsky kraj');
+execute vloz_adresu(11,'Ovsena','158','Vrutky','Zilinsky kraj');
+execute vloz_adresu(12,'Stavbarska','105','Pezinok','Bratislavsky kraj');
+execute vloz_adresu(13,'Lipova','282','Turany','Zilinsky kraj');
+execute vloz_adresu(14,'Narodna','230','Bytca','Zilinsky kraj');
+execute vloz_adresu(15,'Limbova','283','Bratislava I','Bratislavsky kraj');
